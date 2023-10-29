@@ -1,7 +1,7 @@
 import { Counter } from './features/counter/Counter';
 import Home from './pages/Home';
 import './App.css';
-import ProductList from './features/product-list/components/ProductList';
+import ProductList from './features/product/components/ProductList';
 import LoginPage from './pages/LoginPage';
 import Signup from './features/auth/components/Signup';
 import { createRoot } from "react-dom/client";
@@ -15,7 +15,7 @@ import SignupPage from './pages/SignupPage';
 import Cart from './features/cart/Cart';
 import CartPage from './pages/CartPage';
 import Checkout from './pages/Checkout';
-import ProductDetail from './features/product-list/components/ProductDetail';
+import ProductDetail from './features/product/components/ProductDetail';
 import ProductDetailPage from './pages/ProductDetailPage';
 
 const router = createBrowserRouter([
