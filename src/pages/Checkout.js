@@ -265,7 +265,7 @@ const Checkout = () => {
     </form>
     </div> 
     <div className='lg:col-span-2'>
-    <div className="mx-auto mt-12 bg-white px-0 max-w-7xl px-4 sm:px-0 lg:px-0">
+    <div className="mx-auto mt-12 bg-white px-0 max-w-7xl sm:px-0 lg:px-0">
         <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
         <h1 className="text-4xl font-bold tracking-tight text-gray-900 my-5">Cart</h1>
                           <div className="flow-root">
