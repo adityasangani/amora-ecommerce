@@ -3,6 +3,8 @@ import { Fragment } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { Bars3Icon, ShoppingCartIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
+import { selectItems } from '../cart/cartSlice'
 
 
 const user = {
@@ -30,6 +32,7 @@ function classNames(...classes) {
 
 
 const Navbar = ({children}) => {
+  const items = useSelector(selectItems);
   return (
     <>
     <div className="min-h-full">
@@ -80,9 +83,9 @@ const Navbar = ({children}) => {
                         <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
                       </button>
                       </Link>
-                        <span className="inline-flex items-center rounded-xl mb-7 -ml-1 bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
-        3
-      </span>
+                        {items.length>0 && <span className="inline-flex items-center rounded-xl mb-7 -ml-1 bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
+                        {items.length}
+      </span>}
 
                       {/* Profile dropdown */}
                       <Menu as="div" className="relative ml-3">
@@ -174,9 +177,9 @@ const Navbar = ({children}) => {
                       <ShoppingCartIcon className="h-6 w-6" aria-hidden="true" />
                     </button>
                     </Link>
-                      <span className="inline-flex items-center rounded-xl mb-7 -ml-1 bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
-        3
-      </span>
+                      {items.length>0 && <span className="inline-flex items-center rounded-xl mb-7 -ml-1 bg-red-50 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
+                      {items.length}
+      </span>}
                   </div>
                   <div className="mt-3 space-y-1 px-2">
                     {userNavigation.map((item) => (
