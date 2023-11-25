@@ -40,7 +40,7 @@ export default function Login() {
               )
             
           })}
-          action="#" method="POST">
+          >
             <div>
               <label htmlFor="email" className="block text-sm font-medium leading-6 text-gray-900">
                 Email address
